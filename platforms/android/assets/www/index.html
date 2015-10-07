@@ -84,7 +84,7 @@
          $.ajax({
                         url:"http://hostinpageval.6te.net/php/probando.php",  
                         type:"POST",
-                        dataType:"jsonp",
+                        dataType:"json",
                         data:{usuario:usuario_dato, clave:clave_dato, inicio_session:"session"},
                         success: function(resp){
                             alert("Dentramos con exito");
@@ -92,7 +92,7 @@
                        alert(resp["mensaje"]);
                          }, 
                              error: function(jq, status, error){
-                                 alert(error)
+                                 alert("Aca paso algo raro");
                                    $("input#usuario_session").val("");
                                    $("input#clave_session").val("");
                              }
